@@ -194,15 +194,15 @@ _`ci` will be the name of your target (if you followed a the tutorial, it might 
 
 If we look at the pipeline diagram, we can also see the result of the `check` step in the box with the dashed lines (dependency - trigger).
 
-![Screen Shot 2021-02-19 at 11.34.47 PM](/Screen Shot 2021-02-19 at 11.34.47 PM.png)
 
+![screenshot2](/screenshot2.png)
 
 
 
 
 Checking our job, we can see our messages in each of the stages.
 
-![Screen Shot 2021-02-19 at 11.32.29 PM](/Screen Shot 2021-02-19 at 11.32.29 PM.png)
+![screenshot1](/screenshot1.png)
 
 
 
