@@ -8,12 +8,17 @@ Concourse is a CI/CD tool that is configurable with a simple YAML file.
 ---
 
 
-## Pre-Requisities
+
+## Creating the "Hello World" Resource Type
+
+
+
+### Pre-Requisities
 
 Follow the steps on https://concourse-ci.org/ to install Fly & Concourse.
 If this is your first time checking out Concourse, I would highly recommend reviewing the tutorials & docs they have posted.
 
-## Creating the "Hello World" Resource Type
+### Exploring a basic Resource Type
 
 A concourse `resource_type` works well using a minimum of 4 files:
 
@@ -187,16 +192,23 @@ fly -t ci set-pipeline -c hello-pipeline.yml -p hello-world
 ```
 _`ci` will be the name of your target (if you followed a the tutorial, it might be named `tutorial` or `example`)_
 
-
 If we look at the pipeline diagram, we can also see the result of the `check` step in the box with the dashed lines (dependency - trigger).
+
+![Screen Shot 2021-02-19 at 11.34.47 PM](Screen Shot 2021-02-19 at 11.34.47 PM.png)
+
+
+
+
 
 Checking our job, we can see our messages in each of the stages.
 
+![Screen Shot 2021-02-19 at 11.32.29 PM](Screen Shot 2021-02-19 at 11.32.29 PM.png)
 
 
 
+There's a lot you can do creating your own resource types for concourse - be sure to [check out the Resource Types catalog](https://resource-types.concourse-ci.org/), [contribute to the community](https://github.com/concourse/resource-types/blob/master/README.md) and get assistance (or lurk thru questions that have been already answered) in [Discord in the #resource-types channel](https://discord.gg/MeRxXKW).
 
-There's a lot you can do to create your own resource types for concourse - be sure to [check out the Resource Types catalog](https://resource-types.concourse-ci.org/), [contribute to the community](https://github.com/concourse/resource-types/blob/master/README.md) and get assistance (or lurk thru questions that have been already answered) via [Discord in the #resource-types channel](https://discord.gg/MeRxXKW) 
+
 
 
 
