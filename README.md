@@ -20,6 +20,8 @@ If this is your first time checking out Concourse, I would highly recommend revi
 
 ### Exploring a basic Resource Type
 
+You can follow along using or (fork my repo)[https://github.com/thehandsomezebra/concourse-resourcetype-helloworld].
+
 A concourse `resource_type` works well using a minimum of 4 files:
 
 ```
@@ -179,7 +181,7 @@ This is going to create a new pipeline called hello-job that will `get` the `in`
 
 
 # Get it running
-Following the steps above, create a github repo (or fork mine) & create a docker hub repo. It's fast to connect your github repo to docker and even set it up to autobuild ([learn more about that here](https://docs.docker.com/docker-hub/builds/))).
+Following the steps above, create a github repo ([or fork mine](https://github.com/thehandsomezebra/concourse-resourcetype-helloworld)) & create a docker hub repo. It's fast to connect your github repo to docker and even set it up to autobuild ([learn more about that here](https://docs.docker.com/docker-hub/builds/))).
 
 Once your repo is ready in Docker Hub, let's start the concourse pipeline by using this line
 
