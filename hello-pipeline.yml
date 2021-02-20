@@ -1,0 +1,23 @@
+resource_types:
+- name: helloworld
+  type: docker-image
+  source:
+    # set repo of your helloworld resource
+    #repository: Your-Docker-Acct/Your-Docker-Repository
+    ## or use my helloworld resource
+    repository: thehandsomezebra/concourse-resourcetype-helloworld
+
+resources:
+- name: helloworld
+  type: helloworld
+
+jobs:
+- name: hello-job
+  plan:
+  - get: helloworld
+  - put: put-helloworld
+    resource: helloworld
+    inputs:
+         - helloworld
+    params:
+      greeting: "Hey y'all!"

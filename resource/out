@@ -1,0 +1,28 @@
+#!/bin/bash
+echo '{ "version": { "revision": "N/A", "message": "The out script version message says Hello World" }, "metadata": [{ "name": "message", "value": "The out script metadata message says Hello World." }] }'
+
+set -e -u
+
+exec 3>&1 # make stdout available as fd 3 for the result
+exec 1>&2 # redirect all output to stderr for logging
+
+echo "Echo says hi from the out script!" >&2
+
+source=$1
+
+if [[ -z "$source" ]]; then
+  echo "usage: $0 <path/to/source>"
+  exit 1
+fi
+
+# for jq
+PATH=/usr/local/bin:$PATH
+
+export TMPDIR=${TMPDIR:-/tmp/hello}
+mkdir -p "${TMPDIR}"
+
+payload=$(mktemp "$TMPDIR/resource-request.XXXXXX")
+cat > "$payload" <&0
+
+greeting=$(jq -r '.params.greeting // ""' < "$payload")
+echo "Param greeting says: $greeting" >&2

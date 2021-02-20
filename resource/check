@@ -1,0 +1,4 @@
+#!/bin/bash
+set -eu
+set -o pipefail
+echo '[{ "revision": "N/A",  "message": "The check script says Hello World!" }]'
