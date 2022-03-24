@@ -1,0 +1,29 @@
+{
+  "responders": [
+    {
+      "id": "4ce9a2b4-87af-4093-a341-853f22ffce63",
+      "type": "team"
+    },
+    {
+      "name": "STACKIT - AppCloud",
+      "type": "team"
+    }
+  ],
+  "visibleTo": [
+    {
+      "id": "4ce9a2b4-87af-4093-a341-853f22ffce63",
+      "type": "team"
+    },
+    {
+      "name": "STACKIT - AppCloud",
+      "type": "team"
+    }
+  ],
+  "actions": [],
+  "tags": [
+    "OverwriteQuietHours",
+    "Critical"
+  ],
+  "details": {},
+  "description": "kurpaca1 5"
+}

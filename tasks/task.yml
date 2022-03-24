@@ -31,3 +31,4 @@ run:
 
       ATC_EXTERNAL_URL=`cat custom-resource/atc-external-url`
       echo "CONCOURSE_URL is $ATC_EXTERNAL_URL"
+      concourse-pipelines/tasks/alarm.sh "${alarm_priority}" "${alarm_message}" "${alarm_description}" "${alarm_alias}" "${BUILD_NUMBER}" "${JOB_NAME}" "${PIPELINE_NAME}" "${TEAM_NAME}" "${ATC_EXTERNAL_URL}"
