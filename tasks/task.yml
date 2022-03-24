@@ -2,7 +2,7 @@ platform: linux
 image_resource:
   type: registry-image
   source:
-    repository: schwarzit-xx-sit-appcloud-docker-local.jfrog.io/metadata-resource
+    repository: schwarzit-xx-sit-appcloud-docker-local.jfrog.io/a9s-automation
     username: ((jfrog_user))
     password: ((jfrog_password))
     tag: latest
