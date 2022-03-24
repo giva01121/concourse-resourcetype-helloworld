@@ -18,14 +18,14 @@ run:
     - -ec
     - |
       BUILD_ID=`cat custom-resource/build-id`
-      echo "BUILD_ID is $build_id"
+      echo "BUILD_ID is $BUILD_ID"
       BUILD_NAME=`cat custom-resource/build-name`
-      echo "BUILD_NAME is $build_name"
+      echo "BUILD_NAME is $BUILD_NAME"
       BUILD_JOB_NAME=`cat custom-resource/build-job-name`
-      echo "BUILD_JOB_NAME is $build_name"
+      echo "BUILD_JOB_NAME is $BUILD_JOB_NAME"
       BUILD_PIPELINE_NAME=`cat custom-resource/build-pipeline-name`
-      echo "BUILD_PIPELINE_NAME is $build_name"
+      echo "BUILD_PIPELINE_NAME is $BUILD_PIPELINE_NAME"
       BUILD_TEAM_NAME=`cat custom-resource/build-team-name`
-      echo "BUILD_TEAM_NAME is $build_name"
+      echo "BUILD_TEAM_NAME is $BUILD_TEAM_NAME"
       ATC_EXTERNAL_URL=`cat custom-resource/atc-external-url`
-      echo "ATC_EXTERNAL_URL is $build_name"
+      echo "ATC_EXTERNAL_URL is $ATC_EXTERNAL_URL"
