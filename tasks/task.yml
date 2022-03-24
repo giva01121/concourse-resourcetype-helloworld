@@ -1,0 +1,22 @@
+platform: linux
+image_resource:
+  type: registry-image
+  source:
+    repository: schwarzit-xx-sit-appcloud-docker-local.jfrog.io/a9s-automation
+    username: ((jfrog_user))
+    password: ((jfrog_password))
+    tag: latest
+container_limits:
+  cpu: 2
+  memory: 4gb
+inputs:
+  - name: concourse-pipelines
+  - name: custom-resource
+run:
+  path: sh
+  args:
+    - -ec
+    - |
+      pipeline_id=`cat "${ROOT_FOLDER}/meta/build-name"`
+      echo "Pipeline id is $pipeline_id"
+      export "PASSED_PIPELINE_ID=$pipeline_id"
