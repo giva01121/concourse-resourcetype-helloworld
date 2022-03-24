@@ -10,11 +10,11 @@ message="$2"
 description="$3"
 alias="${4:-}"
 
-BUILD_NUMBER=$(cat  custom-resource/build-name)
-JOB_NAME=$(cat  custom-resource/build-job-name)
-PIPELINE_NAME=$(cat  custom-resource/build-pipeline-name)
-TEAM_NAME=$(cat  custom-resource/build-team-name)
-ATC_EXTERNAL_URL=$(cat  custom-resource/atc-external-url)
+BUILD_NUMBER=$(cat  meta/build-name)
+JOB_NAME=$(cat  meta/build-job-name)
+PIPELINE_NAME=$(cat  meta/build-pipeline-name)
+TEAM_NAME=$(cat  meta/build-team-name)
+ATC_EXTERNAL_URL=$(cat  meta/atc-external-url)
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 PIPELINE_URL="${ATC_EXTERNAL_URL}/teams/${TEAM_NAME}/pipelines/$PIPELINE_NAME/jobs/$JOB_NAME/builds/$BUILD_NUMBER"
 body_template=$SCRIPT_DIR/body_template.json
