@@ -11,7 +11,6 @@ container_limits:
   memory: 4gb
 inputs:
   - name: concourse-pipelines
-  - name: custom-resource
 run:
   path: sh
   args:
