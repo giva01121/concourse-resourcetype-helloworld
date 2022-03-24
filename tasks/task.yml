@@ -17,6 +17,6 @@ run:
   args:
     - -ec
     - |
-      pipeline_id=`cat "${ROOT_FOLDER}/meta/build-name"`
+      pipeline_id=`cat "${ROOT_FOLDER}/custom-resource/build-name"`
       echo "Pipeline id is $pipeline_id"
       export "PASSED_PIPELINE_ID=$pipeline_id"
