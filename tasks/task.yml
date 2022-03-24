@@ -17,18 +17,4 @@ run:
   args:
     - -ec
     - |
-      BUILD_NUMBER=`cat custom-resource/build-name`
-      echo "BUILD_NUMBER is $BUILD_NUMBER"
-
-      JOB_NAME=`cat custom-resource/build-job-name`
-      echo "JOB_NAME is $JOB_NAME"
-
-      PIPELINE_NAME=`cat custom-resource/build-pipeline-name`
-      echo "PIPELINE_NAME is $PIPELINE_NAME"
-
-      TEAM_NAME=`cat custom-resource/build-team-name`
-      echo "TEAM_NAME is $TEAM_NAME"
-
-      ATC_EXTERNAL_URL=`cat custom-resource/atc-external-url`
-      echo "CONCOURSE_URL is $ATC_EXTERNAL_URL"
-      concourse-pipelines/tasks/alarm.sh "${alarm_priority}" "${alarm_message}" "${alarm_description}" "${alarm_alias}" "${BUILD_NUMBER}" "${JOB_NAME}" "${PIPELINE_NAME}" "${TEAM_NAME}" "${ATC_EXTERNAL_URL}"
+      concourse-pipelines/tasks/alarm.sh "${alarm_priority}" "${alarm_message}" "${alarm_description}" "${alarm_alias}"
