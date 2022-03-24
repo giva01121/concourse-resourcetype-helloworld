@@ -17,6 +17,15 @@ run:
   args:
     - -ec
     - |
-      pipeline_id=`cat custom-resource/build-name`
-      echo "Pipeline id is $pipeline_id"
-      export "PASSED_PIPELINE_ID=$pipeline_id"
+      BUILD_ID=`cat custom-resource/build-id`
+      echo "BUILD_ID is $build_id"
+      BUILD_NAME=`cat custom-resource/build-name`
+      echo "BUILD_NAME is $build_name"
+      BUILD_JOB_NAME=`cat custom-resource/build-job-name`
+      echo "BUILD_JOB_NAME is $build_name"
+      BUILD_PIPELINE_NAME=`cat custom-resource/build-pipeline-name`
+      echo "BUILD_PIPELINE_NAME is $build_name"
+      BUILD_TEAM_NAME=`cat custom-resource/build-team-name`
+      echo "BUILD_TEAM_NAME is $build_name"
+      ATC_EXTERNAL_URL=`cat custom-resource/atc-external-url`
+      echo "ATC_EXTERNAL_URL is $build_name"
