@@ -24,10 +24,10 @@ run:
       echo "JOB_NAME is $JOB_NAME"
 
       PIPELINE_NAME=`cat custom-resource/build-pipeline-name`
-      echo "PIPELINE_NAME is $BUILD_PIPELINE_NAME"
+      echo "PIPELINE_NAME is $PIPELINE_NAME"
 
       TEAM_NAME=`cat custom-resource/build-team-name`
-      echo "TEAM_NAME is $BUILD_TEAM_NAME"
-      
+      echo "TEAM_NAME is $TEAM_NAME"
+
       ATC_EXTERNAL_URL=`cat custom-resource/atc-external-url`
       echo "CONCOURSE_URL is $ATC_EXTERNAL_URL"
