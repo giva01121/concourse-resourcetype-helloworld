@@ -29,7 +29,7 @@ jq --arg priority "$priority"  '.priority = $priority' < $body_template > body-p
 jq --arg message "$message"  '.message = $message' <  body-parsed.json > INPUT.tmp && mv INPUT.tmp body-parsed.json
 jq --arg description "$description" \
    --arg pipeline_url "$PIPELINE_URL" \
-   --arg'.description = $description +" The pipeline url is: "+ $pipeline_url' < body-parsed.json > INPUT.tmp && mv INPUT.tmp body-parsed.json
+   --arg '.description = $description +" The pipeline url is: "+ $pipeline_url' < body-parsed.json > INPUT.tmp && mv INPUT.tmp body-parsed.json
 if [ -n "${alias}" ];then
   jq --arg 'alias' "$alias" '.alias = $alias' < body-parsed.json > INPUT.tmp && mv INPUT.tmp body-parsed.json
 fi
