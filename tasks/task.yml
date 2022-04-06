@@ -10,7 +10,6 @@ container_limits:
   cpu: 2
   memory: 4gb
 inputs:
-  - name: meta
   - name: concourse-pipelines
 run:
   path: sh

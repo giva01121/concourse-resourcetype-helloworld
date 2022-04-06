@@ -1,25 +1,20 @@
-resource_types:
-- name: custom-resource
-  type: docker-image
-  source:
-    # set repo of your custom-resource resource
-    #repository: Your-Docker-Acct/Your-Docker-Repository
-    ## or use my custom-resource resource
-    repository: swce/metadata-resource
-
+send-alarm-parameters: &send-alarm-parameters
+  alarm_priority: "P3"
+  alarm_description: "The pipeline has failed"
+  genie_key: ((genie_key))
 resources:
 - name: concourse-pipelines
   type: git
   source:
     uri: https://github.com/giva01121/concourse-resourcetype-helloworld.git
     branch: master
-- name: custom-resource
-  type: custom-resource
-
 jobs:
-- name: hello-job
+- name: example_alarm
   plan:
   - get: concourse-pipelines
-  - get: custom-resource
-  - task: prod-deploy
+  - task: deploy
     file: concourse-pipelines/tasks/task.yml
+    params:
+      <<: *send-alarm-parameters
+      alarm_message: "[TESTING]IGNORE_THIS_ALERT"
+      alarm_alias: "Something"
