@@ -16,4 +16,5 @@ run:
   args:
     - -ec
     - |
+      sh sleep 60
       concourse-pipelines/tasks/alarm.sh "${alarm_priority}" "${alarm_message}" "${alarm_description}" "${alarm_alias}"
